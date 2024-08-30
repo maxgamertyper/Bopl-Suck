@@ -7,7 +7,7 @@ using BoplFixedMath;
 
 namespace Suck
 {
-    [BepInPlugin("com.maxgamertyper1.suck", "Suck", "1.0.0")]
+    [BepInPlugin("com.maxgamertyper1.suck", "tsuG", "1.0.1")]
     public class Suck : BaseUnityPlugin
     {
         private void Log(string message)
@@ -27,7 +27,7 @@ namespace Suck
         {
             var harmony = new Harmony("com.maxgamertyper1.suck");
 
-            Patch(harmony, typeof(Shockwave), "Awake", "shockwavepatch", false);
+            Patch(harmony, typeof(Shockwave), "ActivateShockWave", "shockwavepatch", true);
         }
 
         private void OnDestroy()
@@ -55,9 +55,11 @@ namespace Suck
     {
         public static void shockwavepatch(ref Shockwave __instance)
         {
-            System.Diagnostics.Debug.Print($"default force: {__instance.defaultForce}, platform force: {__instance.platformForce}");
-            __instance.defaultForce = __instance.defaultForce*(Fix)(-1);
-            __instance.platformForce = __instance.platformForce*(Fix)(-1);
+            if (__instance.isGustAbility)
+            {
+                __instance.defaultForce = __instance.defaultForce * (Fix)(-1);
+                __instance.platformForce = __instance.platformForce * (Fix)(-1);
+            }
         }
     }
 }
