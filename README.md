@@ -1,8 +1,6 @@
 # Bopl-Suck (tsuG)
 A bopl mod that changes the gust ability so that it's reversed and instead sucks items in (tsuG is Gust backwards)
 
-*Allows for player state copying and customizations when 'munching' another player*
-
 ## Quick Links
 * **[MyBoplMods Repo](https://github.com/maxgamertyper/MyBoplMods)**
 * **[Demonstration Video](https://youtu.be/d0EHBE6xT9I)**
