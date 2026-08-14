@@ -53,5 +53,3 @@ A bopl mod that changes the gust ability so that it's reversed and instead sucks
 ## Configuration Architecture
 
 **This mod has no configuration as it's a very simple reversal of a value**
-  * **Take Color:** This toggles whether the "consumer" will take the color of the "consumed" when eaten *and applicable by the absolute config*
-  * **Take Size:** This toggles whether the "consumer" will take the size of the "consumed" when eaten *and applicable by the absolute config*
